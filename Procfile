@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar build/libs/To-do-list-with-firebase-0.0.1-SNAPSHOT.jar
+web: java -jar build/libs/To-do-list-with-firebase-0.0.1-SNAPSHOT.jar
