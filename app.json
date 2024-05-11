@@ -1,0 +1,11 @@
+{
+  "name": "sha-heroku-deploy-demo",
+  "addons": [
+    "logentries"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/gradle"
+    }
+  ]
+}
