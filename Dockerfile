@@ -9,8 +9,8 @@ RUN gradle build
 #
 # Package stage
 #
-FROM openjdk:17-jre-slim
+FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar /app/app.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java", "-Dserver.port=8080", "-jar", "app.jar"]
