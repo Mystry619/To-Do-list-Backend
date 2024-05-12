@@ -13,4 +13,4 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar /app/app.jar
 EXPOSE 10000
-ENTRYPOINT ["java", "-Dserver.port=10000", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dserver.port=0.0.0.0", "-jar", "app.jar"]
